@@ -10,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || (*list)->next == NULL)
 		return;
 	first = (*list)->next;
-	while(first)
+	while (first)
 	{
 		while ((first->prev) && (first->prev->n > first->n))
 		{
@@ -22,7 +22,7 @@ void insertion_sort_list(listint_t **list)
 }
 /**
  *swap_node - swap a node
- *@node: node
+ *@first: first node
  *@list: node list
  *Return: return a pointer to a node which was enter it
  */
