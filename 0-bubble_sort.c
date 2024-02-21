@@ -6,23 +6,21 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-    size_t bs_iter = 0;
-    size_t adj_iter = 0;
+	size_t bs_iter, adj_iter = 0;
 
-    if(size < 2)
-        return;
-
-    for(bs_iter=0; bs_iter < size-1; bs_iter++)
-    {
-        for(adj_iter=0; adj_iter < size-1-bs_iter; adj_iter++)
-        {
-            if(array[adj_iter] > array[adj_iter+1])
-            {
-                swap(&array[adj_iter], &array[adj_iter+1]);
-                print_array(array, size);
-            }
-        }
-    }
+	if (size < 2)
+		return;
+	for (bs_iter = 0; bs_iter < size - 1; bs_iter++)
+	{
+		for (adj_iter = 0; adj_iter < size - 1 - bs_iter; adj_iter++)
+		{
+			if (array[adj_iter] > array[adj_iter + 1])
+			{
+				swap(&array[adj_iter], &array[adj_iter + 1]);
+				print_array(array, size);
+			}
+		}
+	}
 }
 /**
  * swap - function swap two number
@@ -31,7 +29,7 @@ void bubble_sort(int *array, size_t size)
  */
 void swap(int *num1, int *num2)
 {
-    size_t temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
+	size_t temp = *num1;
+	*num1 = *num2;
+	*num2 = temp;
 }
